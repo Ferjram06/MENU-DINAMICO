@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Práctica 5 - Menú dinámico</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="encabezado">
+        <div class="marca">
+            <span class="logo">MD</span>
+            <div>
+                <h1>Menú dinámico</h1>
+                <p>Práctica 5 · Programación web</p>
+            </div>
+        </div>
+
+        <span class="estado">
+            <span class="punto"></span>
+            Sistema activo
+        </span>
+    </header>
+
+    <nav class="menu-principal" aria-label="Menú principal">
+        <ul class="menu">
+
+            <li>
+                <a href="#" class="opcion activa" data-pagina="Inicio">
+                    Inicio
+                </a>
+            </li>
+
+            <li class="tiene-submenu">
+                <button class="opcion boton-menu"
+                        type="button"
+                        aria-expanded="false">
+                    Consultas <span class="flecha">▾</span>
+                </button>
+
+                <ul class="submenu">
+                    <li><a href="#" data-pagina="Consultas - Ventas">Ventas</a></li>
+                    <li><a href="#" data-pagina="Consultas - Artículos">Artículos</a></li>
+                    <li><a href="#" data-pagina="Consultas - Personal">Personal</a></li>
+                </ul>
+            </li>
+
+            <li class="tiene-submenu">
+                <button class="opcion boton-menu"
+                        type="button"
+                        aria-expanded="false">
+                    Reportes <span class="flecha">▾</span>
+                </button>
+
+                <ul class="submenu">
+                    <li><a href="#" data-pagina="Reportes - Ventas">Ventas</a></li>
+                    <li><a href="#" data-pagina="Reportes - Almacén">Almacén</a></li>
+                    <li><a href="#" data-pagina="Reportes - Personal">Personal</a></li>
+                </ul>
+            </li>
+
+            <li class="tiene-submenu">
+                <button class="opcion boton-menu"
+                        type="button"
+                        aria-expanded="false">
+                    Archivos <span class="flecha">▾</span>
+                </button>
+
+                <ul class="submenu">
+                    <li><a href="#" data-pagina="Cargar archivos">Cargar archivos</a></li>
+                    <li><a href="#" data-pagina="Validar archivos">Validar archivos</a></li>
+                    <li><a href="#" data-pagina="Editar archivos">Editar archivos</a></li>
+                </ul>
+            </li>
+
+            <li class="tiene-submenu">
+                <button class="opcion boton-menu"
+                        type="button"
+                        aria-expanded="false">
+                    Formatos <span class="flecha">▾</span>
+                </button>
+
+                <ul class="submenu">
+                    <li><a href="#" data-pagina="Nuevo registro">Nuevo registro</a></li>
+                    <li><a href="#" data-pagina="Informe mensual">Informe mensual</a></li>
+                    <li><a href="#" data-pagina="Presentación">Presentación</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#" class="opcion" data-pagina="FAQ">FAQ</a>
+            </li>
+
+            <li class="tiene-submenu">
+                <button class="opcion boton-menu"
+                        type="button"
+                        aria-expanded="false">
+                    Ayuda <span class="flecha">▾</span>
+                </button>
+
+                <ul class="submenu submenu-derecha">
+                    <li><a href="#" data-pagina="Versión">Versión</a></li>
+                    <li><a href="#" data-pagina="Acerca de">Acerca de</a></li>
+                    <li><a href="#" data-pagina="Contacto">Contacto</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+
+    <main class="contenido">
+        <section class="tarjeta">
+            <span class="etiqueta">PANEL PRINCIPAL</span>
+
+            <h2 id="titulo-pagina">Bienvenido al sistema</h2>
+
+            <p id="descripcion-pagina">
+                Selecciona una opción del menú para comenzar.
+                Pasa el cursor sobre las opciones para ver los
+                efectos y desplegar los submenús.
+            </p>
+
+            <div class="indicadores">
+                <div class="indicador">
+                    <span class="indicador-icono">01</span>
+                    <div>
+                        <strong>7 opciones</strong>
+                        <p>Menú principal</p>
+                    </div>
+                </div>
+
+                <div class="indicador">
+                    <span class="indicador-icono">02</span>
+                    <div>
+                        <strong>13 subopciones</strong>
+                        <p>Navegación secundaria</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Práctica 5 · Menú dinámico</p>
+        <p>Programación web | IPN - UPIICSA</p>
+    </footer>
+
+</body>
+</html>
